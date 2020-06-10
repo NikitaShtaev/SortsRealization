@@ -31,8 +31,15 @@ namespace SortAlgorithms
             CompareCount++;
             return Items[PosA].CompareTo(Items[PosB]) == 1;
         }
+        public bool SmallerCompare(int PosA, int PosB)
+        {
+            CompareCount++;
+            return Items[PosA].CompareTo(Items[PosB]) == -1;
+        }
         public virtual void Sort()
         {
+            SwapCount = 0;
+            CompareCount = 0;
             Items.Sort();
         }
     }

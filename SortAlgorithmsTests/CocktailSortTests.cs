@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace SortAlgorithms.Tests
 {
     [TestClass()]
-    public class BubbleSortTests
+    public class CocktailSortTests
     {
         public List<int> GetDataList()
         {
@@ -31,14 +31,14 @@ namespace SortAlgorithms.Tests
             //arrange
             var dataList = GetDataList();
             var result = GetSortedItems(dataList);
-            var bubble = new BubbleSort<int>(dataList);
-            var count = bubble.Items.Count;
+            var Cocktail = new CocktailSort<int>(dataList);
+            var count = Cocktail.Items.Count;
             //act
-            bubble.Sort();
+            Cocktail.Sort();
             //assert
             for (int i = 0; i < count; i++)
             {
-                Assert.AreEqual(result[i], bubble.Items[i]);
+                Assert.AreEqual(result[i], Cocktail.Items[i]);
             }
         }
     }

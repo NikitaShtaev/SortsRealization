@@ -12,6 +12,8 @@ namespace SortAlgorithms
         public BubbleSort(List<T> items) : base(items){}
         public override void Sort()
         {
+            SwapCount = 0;
+            CompareCount = 0;
             var timer = new Stopwatch();
             timer.Start();
             var count = Items.Count;
