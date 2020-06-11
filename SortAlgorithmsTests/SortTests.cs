@@ -116,5 +116,57 @@ namespace SortAlgorithms.Tests
                 Assert.AreEqual(sortedItems[i], HeapSort.Items[i]);
             }
         }
+        [TestMethod()]
+        public void SelectionSortTest()
+        {
+            //arrange
+            var selection = new SelectionSort<int>(dataList);
+            //act
+            selection.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], selection.Items[i]);
+            }
+        }
+        [TestMethod()]
+        public void GnomeSortTest()
+        {
+            //arrange
+            var gnome = new GnomeSort<int>(dataList);
+            //act
+            gnome.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], gnome.Items[i]);
+            }
+        }
+        [TestMethod()]
+        public void LSDRadixSortTest()
+        {
+            //arrange
+            var LSDradix = new LSDRadixSort<int>(dataList);
+            //act
+            LSDradix.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], LSDradix.Items[i]);
+            }
+        }
+        [TestMethod()]
+        public void MSDRadixSortTest()
+        {
+            //arrange
+            var MSDradix = new MSDRadixSort<int>(dataList);
+            //act
+            MSDradix.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], MSDradix.Items[i]);
+            }
+        }
     }
 }
