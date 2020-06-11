@@ -1,7 +1,6 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace SortAlgorithms
 {
@@ -10,25 +9,19 @@ namespace SortAlgorithms
     {
         public BubbleSort() {}
         public BubbleSort(List<T> items) : base(items){}
-        public override void Sort()
+        public override void MakeSort()
         {
-            SwapCount = 0;
-            CompareCount = 0;
-            var timer = new Stopwatch();
-            timer.Start();
             var count = Items.Count;
             for (int i = 0; i < count; i++)
             {
                 for (int j = 0; j < count - i-1; j++)
                 {
-                    if (GreaterCompare(j,j+1))
+                    if (Compare(j, j + 1) == 1)
                     {
                         Swap(j, j + 1);
                     }
                 }
             }
-            Time = timer.Elapsed.ToString();
-            timer.Stop();
         }
     }
 }

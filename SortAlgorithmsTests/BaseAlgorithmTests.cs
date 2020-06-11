@@ -4,7 +4,7 @@ using SortAlgorithmsTests;
 namespace SortAlgorithms.Tests
 {
     [TestClass()]
-    public class CocktailSortTests
+    public class BaseAlgorithmTests
     {
         [TestMethod()]
         public void SortTest()
@@ -13,14 +13,14 @@ namespace SortAlgorithms.Tests
             var helper = new HelperGetCollection();
             var dataList = helper.GetDataList();
             var result = helper.GetSortedItems(dataList);
-            var Cocktail = new CocktailSort<int>(dataList);
-            var count = Cocktail.Items.Count;
+            var baseSort = new BaseAlgorithm<int>(dataList);
+            var count = baseSort.Items.Count;
             //act
-            Cocktail.Sort();
+            baseSort.Sort();
             //assert
             for (int i = 0; i < count; i++)
             {
-                Assert.AreEqual(result[i], Cocktail.Items[i]);
+                Assert.AreEqual(result[i], baseSort.Items[i]);
             }
         }
     }

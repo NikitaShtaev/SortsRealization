@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace SortAlgorithms
 {
@@ -9,12 +8,8 @@ namespace SortAlgorithms
     {
         public CocktailSort() {}
         public CocktailSort(List<T> items) : base(items) { }
-        public override void Sort()
+        public override void MakeSort()
         {
-            SwapCount = 0;
-            CompareCount = 0;
-            var timer = new Stopwatch();
-            timer.Start();
             int sc;
             int left = 0;
             int right = Items.Count - 1;
@@ -23,7 +18,7 @@ namespace SortAlgorithms
                 sc = SwapCount;
                 for (int i = left; i < right; i++)
                 {
-                    if (GreaterCompare(i, i + 1))
+                    if (Compare(i, i + 1) == 1)
                     {
                         Swap(i, i + 1);
                     }
@@ -35,9 +30,9 @@ namespace SortAlgorithms
                 }
                 for (int i = right; i > left; i--)
                 {
-                    if (SmallerCompare(i, i-1))
+                    if (Compare(i, i-1) == -1)
                     {
-                        Swap(i, i-1);
+                        Swap(i, i - 1);
                     }
                 }
                 left++;
@@ -46,8 +41,6 @@ namespace SortAlgorithms
                     break;
                 }
             }
-            Time = timer.Elapsed.ToString();
-            timer.Stop();
         }
     }
 }

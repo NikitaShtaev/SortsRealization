@@ -4,23 +4,23 @@ using SortAlgorithmsTests;
 namespace SortAlgorithms.Tests
 {
     [TestClass()]
-    public class CocktailSortTests
+    public class InsertionSortTests
     {
         [TestMethod()]
-        public void SortTest()
+        public void InsertionSortTest()
         {
             //arrange
             var helper = new HelperGetCollection();
             var dataList = helper.GetDataList();
             var result = helper.GetSortedItems(dataList);
-            var Cocktail = new CocktailSort<int>(dataList);
-            var count = Cocktail.Items.Count;
+            var insertion = new InsertionSort<int>(dataList);
+            var count = insertion.Items.Count;
             //act
-            Cocktail.Sort();
+            insertion.Sort();
             //assert
             for (int i = 0; i < count; i++)
             {
-                Assert.AreEqual(result[i], Cocktail.Items[i]);
+                Assert.AreEqual(result[i], insertion.Items[i]);
             }
         }
     }
