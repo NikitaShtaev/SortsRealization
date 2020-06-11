@@ -11,9 +11,9 @@ namespace SortAlgorithms
         public override void MakeSort()
         {
             var count = Items.Count;
-            int j;
+            int i, j;
             T temp;
-            for (int i = 1; i < count; i++)
+            for (i = 1; i < count; i++)
             {
                 temp = Items[i];
                 j = i;

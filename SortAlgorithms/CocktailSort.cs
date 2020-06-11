@@ -10,13 +10,13 @@ namespace SortAlgorithms
         public CocktailSort(List<T> items) : base(items) { }
         public override void MakeSort()
         {
-            int sc;
+            int i, sc;
             int left = 0;
             int right = Items.Count - 1;
             while(left<right)
             {
                 sc = SwapCount;
-                for (int i = left; i < right; i++)
+                for (i = left; i < right; i++)
                 {
                     if (Compare(i, i + 1) == 1)
                     {
@@ -28,7 +28,7 @@ namespace SortAlgorithms
                 {
                     break;
                 }
-                for (int i = right; i > left; i--)
+                for (i = right; i > left; i--)
                 {
                     if (Compare(i, i-1) == -1)
                     {

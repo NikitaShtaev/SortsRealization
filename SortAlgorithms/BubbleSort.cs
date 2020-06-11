@@ -12,9 +12,10 @@ namespace SortAlgorithms
         public override void MakeSort()
         {
             var count = Items.Count;
-            for (int i = 0; i < count; i++)
+            int i, j;
+            for (i = 0; i < count; i++)
             {
-                for (int j = 0; j < count - i-1; j++)
+                for (j = 0; j < count - i-1; j++)
                 {
                     if (Compare(j, j + 1) == 1)
                     {
