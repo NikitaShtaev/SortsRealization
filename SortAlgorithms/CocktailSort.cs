@@ -7,7 +7,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public CocktailSort() {}
-        public CocktailSort(List<T> items) : base(items) { }
+        public CocktailSort(IEnumerable<T> items) : base(items) { }
         public override void MakeSort()
         {
             int i, sc;

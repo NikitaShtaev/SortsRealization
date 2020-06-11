@@ -8,7 +8,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public BubbleSort() {}
-        public BubbleSort(List<T> items) : base(items){}
+        public BubbleSort(IEnumerable<T> items) : base(items){}
         public override void MakeSort()
         {
             var count = Items.Count;

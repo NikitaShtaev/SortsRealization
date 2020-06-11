@@ -35,9 +35,9 @@ namespace SortAlgorithms
         /// Constructor that takes List of values.
         /// </summary>
         /// <param name="items"></param>
-        public BaseAlgorithm(List<T> items)
+        public BaseAlgorithm(IEnumerable<T> items)
         {
-            Items = items;
+            Items.AddRange(items);
         }
         /// <summary>
         /// Swap operation changes items in collection by numbers.

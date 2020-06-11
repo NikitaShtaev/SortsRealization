@@ -77,5 +77,31 @@ namespace SortAlgorithms.Tests
                 Assert.AreEqual(sortedItems[i], insertionSort.Items[i]);
             }
         }
+        [TestMethod()]
+        public void ShellSortTest()
+        {
+            //arrange
+            var ShellSort = new ShellSort<int>(dataList);
+            //act
+            ShellSort.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], ShellSort.Items[i]);
+            }
+        }
+        [TestMethod()]
+        public void TreeSortTest()
+        {
+            //arrange
+            var TreeSort = new TreeSort<int>(dataList);
+            //act
+            TreeSort.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], TreeSort.Items[i]);
+            }
+        }
     }
 }
