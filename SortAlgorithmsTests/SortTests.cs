@@ -103,5 +103,18 @@ namespace SortAlgorithms.Tests
                 Assert.AreEqual(sortedItems[i], TreeSort.Items[i]);
             }
         }
+        [TestMethod()]
+        public void HeapSortTest()
+        {
+            //arrange
+            var HeapSort = new HeapSort<int>(dataList);
+            //act
+            HeapSort.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], HeapSort.Items[i]);
+            }
+        }
     }
 }
