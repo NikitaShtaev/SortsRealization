@@ -15,9 +15,9 @@ namespace SortAlgorithms.Tests
         public void Init()
         {
             dataList.Clear();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10000; i++)
             {
-                dataList.Add(rnd.Next(0, 1000));
+                dataList.Add(rnd.Next(0, 10000000));
             }
             sortedItems.Clear();
             sortedItems.AddRange(dataList);
@@ -166,6 +166,32 @@ namespace SortAlgorithms.Tests
             for (int i = 0; i < count; i++)
             {
                 Assert.AreEqual(sortedItems[i], MSDradix.Items[i]);
+            }
+        }
+        [TestMethod()]
+        public void MergeSortTest()
+        {
+            //arrange
+            var merge = new MergeSort<int>(dataList);
+            //act
+            merge.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], merge.Items[i]);
+            }
+        }
+        [TestMethod()]
+        public void QuickSortTest()
+        {
+            //arrange
+            var quick = new QuickSort<int>(dataList);
+            //act
+            quick.Sort();
+            //assert
+            for (int i = 0; i < count; i++)
+            {
+                Assert.AreEqual(sortedItems[i], quick.Items[i]);
             }
         }
     }
