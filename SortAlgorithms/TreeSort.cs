@@ -8,7 +8,7 @@ namespace SortAlgorithms
         where T: IComparable, IComparable<T>
     {
         public TreeSort() {}
-        public TreeSort(IEnumerable<T> items) : base(items){}
+        public TreeSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
             BinaryTree<T> binaryTree = new BinaryTree<T>(Items);

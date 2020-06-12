@@ -7,7 +7,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public QuickSort() {}
-        public QuickSort(IEnumerable<T> items) : base(items){}
+        public QuickSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
             QSort(0, Items.Count-1);

@@ -7,7 +7,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public ShellSort() {}
-        public ShellSort(IEnumerable<T> items) : base(items){}
+        public ShellSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
 			int step, i, j;

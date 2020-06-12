@@ -8,7 +8,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public MergeSort() {}
-        public MergeSort(IEnumerable<T> items) : base(items){}
+        public MergeSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
             Items = SortMerge(Items);

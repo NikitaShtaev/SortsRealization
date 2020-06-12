@@ -7,7 +7,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public InsertionSort() {}
-        public InsertionSort(IEnumerable<T> items) : base(items) { }
+        public InsertionSort(IEnumerable<T> items, string name) : base(items, name) { }
         public override void MakeSort()
         {
             var count = Items.Count;

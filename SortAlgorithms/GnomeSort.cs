@@ -8,7 +8,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public GnomeSort() {}
-        public GnomeSort(IEnumerable<T> items) : base(items){}
+        public GnomeSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
             var count = Items.Count;

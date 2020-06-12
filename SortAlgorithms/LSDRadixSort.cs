@@ -9,7 +9,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public LSDRadixSort() {}
-        public LSDRadixSort(IEnumerable<T> items) : base(items){}
+        public LSDRadixSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
             var groups = new List<List<T>>();

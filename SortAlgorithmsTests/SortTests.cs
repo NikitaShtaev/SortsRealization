@@ -29,7 +29,7 @@ namespace SortAlgorithms.Tests
         public void BaseSortTest()
         {
             //arrange
-            var baseSort = new BaseAlgorithm<int>(dataList);
+            var baseSort = new BaseAlgorithm<int>(dataList, "Base");
             //act
             baseSort.Sort();
             //assert
@@ -42,7 +42,7 @@ namespace SortAlgorithms.Tests
         public void BubbleSortTest()
         {
             //arrange
-            var bubbleSort = new BubbleSort<int>(dataList);
+            var bubbleSort = new BubbleSort<int>(dataList, "Bubble");
             //act
             bubbleSort.Sort();
             //assert
@@ -55,7 +55,7 @@ namespace SortAlgorithms.Tests
         public void CocktailSortTest()
         {
             //arrange
-            var cocktailSort = new CocktailSort<int>(dataList);
+            var cocktailSort = new CocktailSort<int>(dataList, "Cocktail");
             //act
             cocktailSort.Sort();
             //assert
@@ -68,7 +68,7 @@ namespace SortAlgorithms.Tests
         public void InsertionSortTest()
         {
             //arrange
-            var insertionSort = new InsertionSort<int>(dataList);
+            var insertionSort = new InsertionSort<int>(dataList, "Insertion");
             //act
             insertionSort.Sort();
             //assert
@@ -81,7 +81,7 @@ namespace SortAlgorithms.Tests
         public void ShellSortTest()
         {
             //arrange
-            var ShellSort = new ShellSort<int>(dataList);
+            var ShellSort = new ShellSort<int>(dataList, "Shell");
             //act
             ShellSort.Sort();
             //assert
@@ -94,7 +94,7 @@ namespace SortAlgorithms.Tests
         public void TreeSortTest()
         {
             //arrange
-            var TreeSort = new TreeSort<int>(dataList);
+            var TreeSort = new TreeSort<int>(dataList, "Tree");
             //act
             TreeSort.Sort();
             //assert
@@ -107,7 +107,7 @@ namespace SortAlgorithms.Tests
         public void HeapSortTest()
         {
             //arrange
-            var HeapSort = new HeapSort<int>(dataList);
+            var HeapSort = new HeapSort<int>(dataList, "Heap");
             //act
             HeapSort.Sort();
             //assert
@@ -120,7 +120,7 @@ namespace SortAlgorithms.Tests
         public void SelectionSortTest()
         {
             //arrange
-            var selection = new SelectionSort<int>(dataList);
+            var selection = new SelectionSort<int>(dataList, "Selection");
             //act
             selection.Sort();
             //assert
@@ -133,7 +133,7 @@ namespace SortAlgorithms.Tests
         public void GnomeSortTest()
         {
             //arrange
-            var gnome = new GnomeSort<int>(dataList);
+            var gnome = new GnomeSort<int>(dataList, "Gnome");
             //act
             gnome.Sort();
             //assert
@@ -146,7 +146,7 @@ namespace SortAlgorithms.Tests
         public void LSDRadixSortTest()
         {
             //arrange
-            var LSDradix = new LSDRadixSort<int>(dataList);
+            var LSDradix = new LSDRadixSort<int>(dataList, "LSD");
             //act
             LSDradix.Sort();
             //assert
@@ -159,7 +159,7 @@ namespace SortAlgorithms.Tests
         public void MSDRadixSortTest()
         {
             //arrange
-            var MSDradix = new MSDRadixSort<int>(dataList);
+            var MSDradix = new MSDRadixSort<int>(dataList, "MSD");
             //act
             MSDradix.Sort();
             //assert
@@ -172,7 +172,7 @@ namespace SortAlgorithms.Tests
         public void MergeSortTest()
         {
             //arrange
-            var merge = new MergeSort<int>(dataList);
+            var merge = new MergeSort<int>(dataList, "Merge");
             //act
             merge.Sort();
             //assert
@@ -185,7 +185,7 @@ namespace SortAlgorithms.Tests
         public void QuickSortTest()
         {
             //arrange
-            var quick = new QuickSort<int>(dataList);
+            var quick = new QuickSort<int>(dataList, "Quick");
             //act
             quick.Sort();
             //assert

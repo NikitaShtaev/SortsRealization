@@ -8,6 +8,10 @@ namespace SortAlgorithms
         where T: IComparable
     {
         /// <summary>
+        /// Name of algorithm.
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
         /// Collection of values.
         /// </summary>
         public List<T> Items { get; set; } = new List<T>();
@@ -35,9 +39,10 @@ namespace SortAlgorithms
         /// Constructor that takes List of values.
         /// </summary>
         /// <param name="items"></param>
-        public BaseAlgorithm(IEnumerable<T> items)
+        public BaseAlgorithm(IEnumerable<T> items, string name)
         {
             Items.AddRange(items);
+            Name = name;
         }
         /// <summary>
         /// Swap operation changes items in collection by numbers.

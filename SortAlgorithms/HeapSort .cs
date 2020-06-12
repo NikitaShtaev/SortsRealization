@@ -8,7 +8,7 @@ namespace SortAlgorithms
         where T: IComparable, IComparable<T>
     {
         public HeapSort() {}
-        public HeapSort(IEnumerable<T> items) : base(items){}
+        public HeapSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
             Heap<T> heap = new Heap<T>(Items);

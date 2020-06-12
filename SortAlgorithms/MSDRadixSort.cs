@@ -9,7 +9,7 @@ namespace SortAlgorithms
         where T: IComparable
     {
         public MSDRadixSort() {}
-        public MSDRadixSort(IEnumerable<T> items) : base(items){}
+        public MSDRadixSort(IEnumerable<T> items, string name) : base(items, name){}
         public override void MakeSort()
         {
             int maxRadixSize = Items.Max().ToString().Length;
